@@ -19,6 +19,9 @@ print(display)
 while not game_over:
     prompt = input("Guess a letter: ").lower()
 
+    if prompt in display:
+        print(f"You already guessed {prompt} already")
+
     for position in range(len(word)):
         letter = word[position]
         if prompt == letter: 
@@ -26,6 +29,7 @@ while not game_over:
     print(display)
     '''STEP 4: DECREASE LIVES'''
     if prompt not in word:
+        print("You lost a life")
         lives -= 1
         if lives == 0:
             print("Game over! You lose!")
