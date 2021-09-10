@@ -5,8 +5,7 @@ import random
 '''STEP 1: GENERATE RANDOM WORD'''
 game_over = False
 lives = 6
-word_list = words
-word = random.choice(word_list)
+word = random.choice(words)
 
 '''STEP 2: GENERATE AS MANY BLANKS IN THE WORD'''
 # create empty list
