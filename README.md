@@ -1,1 +1,1 @@
-# Day 7 - Hangman project
+# Day 7 - Hangman project - with added words.py file

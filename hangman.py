@@ -1,11 +1,11 @@
 # Hangman project (Day 7)
-
-from math import trunc
+'''STEP 5: INCREASE NUMBER OF WORDS USED'''
+from words import words
 import random
 '''STEP 1: GENERATE RANDOM WORD'''
 game_over = False
 lives = 6
-word_list = ["ardvark", "baboon", "camel"]
+word_list = words
 word = random.choice(word_list)
 
 '''STEP 2: GENERATE AS MANY BLANKS IN THE WORD'''
