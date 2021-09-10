@@ -1,8 +1,10 @@
 # Hangman project (Day 7)
 
+from math import trunc
 import random
 '''STEP 1: GENERATE RANDOM WORD'''
 game_over = False
+lives = 6
 word_list = ["ardvark", "baboon", "camel"]
 word = random.choice(word_list)
 
@@ -23,8 +25,14 @@ while not game_over:
         if prompt == letter: 
             display[position] = letter
     print(display)
+    '''STEP 4: DECREASE LIVES'''
+    if prompt not in word:
+        lives -= 1
+        if lives == 0:
+            print("Game over! You lose!")
+            game_over = True
     '''STEP 3: CHECK IF PLAYER HAS WON'''
     if "-" not in display:
         game_over = True
-    
-print("You win")
+        print("You win")
+
